@@ -1,0 +1,25 @@
+{
+  "name": "emergency-status-function",
+  "version": "1.0.0",
+  "description": "Google Cloud Function to retrieve emergency status from MongoDB Atlas",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "node -r dotenv/config dist/server.js",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "deploy": "gcloud functions deploy getEmergencyStatus --runtime nodejs18 --trigger-http --allow-unauthenticated --entry-point getEmergencyStatus --region=us-central1",
+    "seed": "ts-node -r dotenv/config src/scripts/seed-setting.ts"
+  },
+  "dependencies": {
+    "@google-cloud/functions-framework": "^3.0.0",
+    "mongodb": "^6.0.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.2",
+    "@types/express": "^4.17.21"
+  }
+}
