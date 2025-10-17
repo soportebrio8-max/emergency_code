@@ -25,8 +25,8 @@ function parseArgs(argv: string[]): ArgMap {
   }
 
   const key: string = 'RATE_VALUE';
-  const value: number = 101;
-  const description: string = "Si el valor de la tasa es superior a 100 todo transcurrira con total normalidad.";
+  const value: number = 100;
+  const description: string = "Tasa porcentual de cambio.";
   const client = new MongoClient(MONGO_URI, {
     serverApi: {
       version: ServerApiVersion.v1,

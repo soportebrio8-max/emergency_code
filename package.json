@@ -4,7 +4,7 @@
   "description": "Google Cloud Function to retrieve emergency status from MongoDB Atlas",
   "main": "dist/index.js",
   "scripts": {
-    "start": "node -r dotenv/config dist/server.js",
+    "start": "node dist/server.js",
     "build": "tsc",
     "watch": "tsc --watch",
     "deploy": "gcloud functions deploy getEmergencyStatus --runtime nodejs18 --trigger-http --allow-unauthenticated --entry-point getEmergencyStatus --region=us-central1",
