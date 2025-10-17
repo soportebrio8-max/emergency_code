@@ -26,7 +26,7 @@ function parseArgs(argv: string[]): ArgMap {
 
   const key: string = 'RATE_VALUE';
   const value: number = 100;
-  const description: string = "Tasa porcentual de cambio.";
+  const description: string = "Ratio de tasa porcentual de cambio.";
   const client = new MongoClient(MONGO_URI, {
     serverApi: {
       version: ServerApiVersion.v1,

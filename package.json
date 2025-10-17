@@ -8,7 +8,7 @@
     "build": "tsc",
     "watch": "tsc --watch",
     "deploy": "gcloud functions deploy getEmergencyStatus --runtime nodejs18 --trigger-http --allow-unauthenticated --entry-point getEmergencyStatus --region=us-central1",
-    "seed": "ts-node -r dotenv/config src/scripts/seed-setting.ts"
+    "seed": "ts-node src/scripts/seed-setting.ts"
   },
   "dependencies": {
     "@google-cloud/functions-framework": "^3.0.0",
